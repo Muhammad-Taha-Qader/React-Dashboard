@@ -6,9 +6,9 @@ const Sidebar = ({isVisible}) => {
     // <nav className = {`${(!isVisible) ? 'block' : 'hidden'} ${isVisible ? 'lg:block' : 'lg:hidden'} min-w-52 w-72 h-full text-white bg-gray-800`}>
     <nav className = {`${(isVisible) ? 'hidden lg:block' : 'block lg:hidden'} min-w-52 w-72 h-full text-white bg-gray-800`}>
       <div className="p-4">
-        <a className="text-xl font-bold" href="index.html">
-          AdminKit
-        </a>
+        <Link className="text-xl font-bold" to="/dashboard">
+          Twillight Admin
+        </Link>
       </div>
 
       <ul className="mt-6">
@@ -17,37 +17,38 @@ const Sidebar = ({isVisible}) => {
             <Sliders className="mr-2" />
             Dashboard
           </a> */}
-          <Link to="/" className="flex items-center text-white"> {/* Use Link here */}
+          <Link to="/dashboard" className="flex items-center text-white"> {/* Use Link here */}
             <Sliders className="mr-2" />
             Dashboard
           </Link>
         </li>
 
         <li className="px-4 py-2">
-          <a href="pages-profile.html" className="flex items-center text-white">
+
+          <Link to="/profile" className="flex items-center text-white"> {/* Use Link here */}
             <User className="mr-2" />
             Profile
-          </a>
+          </Link>
         </li>
 
         <li className="px-4 py-2">
-          <a href="pages-sign-in.html" className="flex items-center text-white">
+          <Link to="/" className="flex items-center text-white">
             <LogIn className="mr-2" />
             Sign In
-          </a>
+          </Link>
         </li>
 
         <li className="px-4 py-2">
-          <a href="pages-sign-up.html" className="flex items-center text-white">
+          <Link to="/signup" className="flex items-center text-white">
             <UserPlus className="mr-2" />
             Sign Up
-          </a>
+          </Link>
         </li>
 
         <li className="px-4 py-2">
           <a href="pages-blank.html" className="flex items-center text-white">
             <Book className="mr-2" />
-            Blank
+            Blank ⌛
           </a>
         </li>
 
@@ -56,35 +57,35 @@ const Sidebar = ({isVisible}) => {
         <li className="px-4 py-2">
           <a href="ui-buttons.html" className="flex items-center text-white">
             <Square className="mr-2" />
-            Buttons
+            Buttons ⌛
           </a>
         </li>
 
         <li className="px-4 py-2">
           <a href="ui-forms.html" className="flex items-center text-white">
             <CheckSquare className="mr-2" />
-            Forms
+            Forms ⌛
           </a>
         </li>
 
         <li className="px-4 py-2">
           <a href="ui-cards.html" className="flex items-center text-white">
             <Grid className="mr-2" />
-            Cards
+            Cards ⌛
           </a>
         </li>
 
         <li className="px-4 py-2">
           <a href="ui-typography.html" className="flex items-center text-white">
             <AlignLeft className="mr-2" />
-            Typography
+            Typography ⌛
           </a>
         </li>
 
         <li className="px-4 py-2">
           <a href="icons-feather.html" className="flex items-center text-white">
             <Coffee className="mr-2" />
-            Icons
+            Icons ⌛
           </a>
         </li>
 
@@ -93,7 +94,7 @@ const Sidebar = ({isVisible}) => {
         <li className="px-4 py-2">
           <a href="charts-chartjs.html" className="flex items-center text-white">
             <BarChart2 className="mr-2" />
-            Charts
+            Charts ⌛
           </a>
         </li>
 
