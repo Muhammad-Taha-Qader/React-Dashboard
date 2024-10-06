@@ -1,0 +1,76 @@
+import { useState } from 'react';
+import { ShoppingCart, DollarSign, Users, Package, Calendar } from 'react-feather';
+import AnalyticsCard from '../components/AnalyticsCard'; 
+import RecentMovementChart from '../components/RecentMovementChart';
+import Sidebar from '../components/SideBar';
+import TopNav from '../components/TopNav';
+import RealTimeMapComponent from '../components/RealTimeMapComponent';
+import BrowserUsageComponent from '../components/BrowserUsageComponent';
+
+const Dashboard = () => {
+  const [isSideBarVisible, setSideBarVisible] = useState(true);
+  const toggleSideBar = () => {
+    setSideBarVisible(!isSideBarVisible); // Toggle sidebar visibility
+  };
+  return (
+    <div className="container mx-auto p-6 pr-0">
+        <div className='flex flex-row'>
+
+            {/* {isSideBarVisible && <Sidebar className="grow-0 lg:block" />}  */}
+            {/* <div className={`${isSideBarVisible ? 'block' : 'hidden'} lg:block`}> */}
+            <div className={`${isSideBarVisible ? 'block' : 'hidden'} grow-0`}>
+                <Sidebar  isVisible={isSideBarVisible} />
+            </div>
+            {/* <Sidebar style={{ display: 'none' }} /> */}
+
+            <div className='grow px-3'>
+                <TopNav toggleSidebar={toggleSideBar} />
+
+                <h1 className="text-2xl font-bold mb-6 mt-6">Analytics Dashboard</h1>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+                    <AnalyticsCard
+                    icon={ShoppingCart}
+                    title="Sales"
+                    value="2,382"
+                    change="-3.65%"
+                    changeType="negative"
+                    />
+                    <AnalyticsCard
+                    icon={DollarSign}
+                    title="Earnings"
+                    value="$21,300"
+                    change="+6.65%"
+                    changeType="positive"
+                    />
+                    <AnalyticsCard
+                    icon={Users}
+                    title="Visitors"
+                    value="14,212"
+                    change="+5.25%"
+                    changeType="positive"
+                    />
+                    <AnalyticsCard
+                    icon={Package}
+                    title="Orders"
+                    value="64"
+                    change="-2.25%"
+                    changeType="negative"
+                    />
+                </div>
+
+                {/* Recent Movement Chart */}
+                <RecentMovementChart/>
+
+                <div className='flex flex-col'>
+                    <Calendar />
+                    <RealTimeMapComponent />
+                    <BrowserUsageComponent/>
+                </div>
+            </div>
+        </div>
+    </div>
+  );
+};
+
+export default Dashboard;
