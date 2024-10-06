@@ -8,7 +8,7 @@ const Maps = ({ isSideBarVisible, toggleSideBar }) => {
       <div className="flex flex-row">
 
         {/* Sidebar: Fixed width to prevent it from collapsing */}
-        <div className={`${isSideBarVisible ? 'block' : 'hidden'} w-64`}>
+        <div className={`${(isSideBarVisible) ? 'hidden lg:block' : 'block lg:hidden'}  w-64`}>
           <Sidebar isVisible={isSideBarVisible} />
         </div>
 

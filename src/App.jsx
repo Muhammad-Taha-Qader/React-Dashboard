@@ -8,6 +8,7 @@ function App() {
   
   const toggleSideBar = () => {
     setSideBarVisible(!isSideBarVisible); // Toggle sidebar visibility
+    console.log(isSideBarVisible)
   };
   return (
     <>
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard isSideBarVisible={isSideBarVisible} toggleSideBar={toggleSideBar} />} />
           <Route path="/maps" element={<Maps isSideBarVisible={isSideBarVisible} toggleSideBar={toggleSideBar} />} />
-          {/* Add more routes as needed */}
+          <Route path="/profile" element={<Maps isSideBarVisible={isSideBarVisible} toggleSideBar={toggleSideBar} />} />
         </Routes>
       </Router>
 

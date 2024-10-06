@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Sidebar = ({isVisible}) => {
   return (
-    <nav className = {`${isVisible ? 'block' : 'hidden'} w-72 h-full text-white bg-gray-800`}>
+    // <nav className = {`${(!isVisible) ? 'block' : 'hidden'} ${isVisible ? 'lg:block' : 'lg:hidden'} min-w-52 w-72 h-full text-white bg-gray-800`}>
+    <nav className = {`${(isVisible) ? 'hidden lg:block' : 'block lg:hidden'} min-w-52 w-72 h-full text-white bg-gray-800`}>
       <div className="p-4">
         <a className="text-xl font-bold" href="index.html">
           AdminKit

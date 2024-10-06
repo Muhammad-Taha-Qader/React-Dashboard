@@ -15,12 +15,12 @@ const Dashboard = ({isSideBarVisible,toggleSideBar }) => {
 
             {/* {isSideBarVisible && <Sidebar className="grow-0 lg:block" />}  */}
             {/* <div className={`${isSideBarVisible ? 'block' : 'hidden'} lg:block`}> */}
-            <div className={`${isSideBarVisible ? 'block' : 'hidden'} grow-0`}>
+            <div className={`${(isSideBarVisible) ? 'hidden lg:block' : 'block lg:hidden'}  w-64`}>
                 <Sidebar  isVisible={isSideBarVisible} />
             </div>
             {/* <Sidebar style={{ display: 'none' }} /> */}
 
-            <div className='grow px-3'>
+            <div className='grow mx-12'>
                 <TopNav toggleSidebar={toggleSideBar} />
 
                 <h1 className="text-2xl font-bold mb-6 mt-6">Analytics Dashboard</h1>
