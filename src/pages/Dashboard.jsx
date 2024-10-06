@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { ShoppingCart, DollarSign, Users, Package} from 'react-feather';
 import AnalyticsCard from '../components/AnalyticsCard'; 
 import RecentMovementChart from '../components/RecentMovementChart';
@@ -7,13 +6,11 @@ import TopNav from '../components/TopNav';
 import RealTimeMapComponent from '../components/RealTimeMapComponent';
 import BrowserUsageComponent from '../components/BrowserUsageComponent';
 import CalendarComponent from '../components/CalendarComponent';
-const Dashboard = () => {
-  const [isSideBarVisible, setSideBarVisible] = useState(true);
-  const toggleSideBar = () => {
-    setSideBarVisible(!isSideBarVisible); // Toggle sidebar visibility
-  };
+const Dashboard = ({isSideBarVisible,toggleSideBar }) => {
+
   return (
-    <div className="container mx-auto p-6 pr-0">
+    <div className=" p-6 pr-0">
+    {/* <div className="container mx-auto p-6 pr-0"> */}
         <div className='flex flex-row'>
 
             {/* {isSideBarVisible && <Sidebar className="grow-0 lg:block" />}  */}

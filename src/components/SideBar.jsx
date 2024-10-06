@@ -1,4 +1,5 @@
 import { Sliders, User, LogIn, UserPlus, Book, Square, CheckSquare, Grid, AlignLeft, Coffee, BarChart2, Map } from 'react-feather'; // Import specific icons
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Sidebar = ({isVisible}) => {
   return (
@@ -11,10 +12,14 @@ const Sidebar = ({isVisible}) => {
 
       <ul className="mt-6">
         <li className="px-4 py-2">
-          <a href="index.html" className="flex items-center text-white"> {/* Added text-white */}
+          {/* <a href="index.html" className="flex items-center text-white"> 
             <Sliders className="mr-2" />
             Dashboard
-          </a>
+          </a> */}
+          <Link to="/" className="flex items-center text-white"> {/* Use Link here */}
+            <Sliders className="mr-2" />
+            Dashboard
+          </Link>
         </li>
 
         <li className="px-4 py-2">
@@ -92,10 +97,14 @@ const Sidebar = ({isVisible}) => {
         </li>
 
         <li className="px-4 py-2">
-          <a href="maps-google.html" className="flex items-center text-white">
+          {/* <a href="../pages/Maps.jsx" className="flex items-center text-white">
             <Map className="mr-2" />
             Maps
-          </a>
+          </a> */}
+           <Link to="/maps" className="flex items-center text-white"> {/* Use Link here */}
+            <Map className="mr-2" />
+            Maps
+          </Link>
         </li>
       </ul>
 
