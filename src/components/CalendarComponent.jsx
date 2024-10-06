@@ -1,14 +1,14 @@
 
 const CalendarComponent = () => {
   return (
-    <div className="bg-white rounded-lg shadow p-6">
+    <div className="bg-white rounded-lg shadow p-6 text-gray-950">
       <h2 className="text-lg font-semibold mb-4">Calendar</h2>
       <div className="text-center">
         {/* Calendar Structure */}
         <div className="flex justify-between items-center mb-2">
-          <button className="text-gray-600">&laquo;</button>
+          <button className="text-gray-200 bg-gray-400">&laquo;</button>
           <span className="text-lg font-medium">October 2024</span>
-          <button className="text-gray-600">&raquo;</button>
+          <button className="text-gray-200 bg-gray-400">&raquo;</button>
         </div>
         <div className="grid grid-cols-7 gap-2 text-gray-700">
           {/* Days of the week */}

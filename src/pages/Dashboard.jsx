@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { ShoppingCart, DollarSign, Users, Package, Calendar } from 'react-feather';
+import { ShoppingCart, DollarSign, Users, Package} from 'react-feather';
 import AnalyticsCard from '../components/AnalyticsCard'; 
 import RecentMovementChart from '../components/RecentMovementChart';
 import Sidebar from '../components/SideBar';
 import TopNav from '../components/TopNav';
 import RealTimeMapComponent from '../components/RealTimeMapComponent';
 import BrowserUsageComponent from '../components/BrowserUsageComponent';
-
+import CalendarComponent from '../components/CalendarComponent';
 const Dashboard = () => {
   const [isSideBarVisible, setSideBarVisible] = useState(true);
   const toggleSideBar = () => {
@@ -62,9 +62,9 @@ const Dashboard = () => {
                 {/* Recent Movement Chart */}
                 <RecentMovementChart/>
 
-                <div className='flex flex-col'>
-                    <Calendar />
-                    <RealTimeMapComponent />
+                <div className='flex flex-col md:flex-row justify-center my-5 gap-x-4'>
+                    <CalendarComponent className='max-w-56' />
+                    <RealTimeMapComponent  />
                     <BrowserUsageComponent/>
                 </div>
             </div>
