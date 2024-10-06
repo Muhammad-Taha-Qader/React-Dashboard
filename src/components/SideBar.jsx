@@ -7,7 +7,7 @@ const Sidebar = ({isVisible}) => {
     <nav className = {`${(isVisible) ? 'hidden lg:block' : 'block lg:hidden'} min-w-52 w-72 h-full text-white bg-gray-800`}>
       <div className="p-4">
         <Link className="text-xl font-bold" to="/dashboard">
-          Twillight Admin
+            Twilight Admin
         </Link>
       </div>
 
