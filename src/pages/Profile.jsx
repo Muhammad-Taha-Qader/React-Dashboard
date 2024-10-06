@@ -1,9 +1,9 @@
 import  { useState } from 'react';
-import ProfileHeader from '../components/ProfileHeader';
-import ProfileBio from '../components/ProfileBio';
-import ProfileStats from '../components/ProfileStats';
-import ProfileTabs from '../components/ProfileTabs';
-import ProfileContent from '../components/ProfileContent';
+import ProfileHeader from '../components/Profile/ProfileHeader';
+import ProfileBio from '../components/Profile/ProfileBio';
+import ProfileStats from '../components/Profile/ProfileStats';
+import ProfileTabs from '../components/Profile/ProfileTabs';
+import ProfileContent from '../components/Profile/ProfileContent';
 import Sidebar from "../components/SideBar";
 import TopNav from "../components/TopNav";
 

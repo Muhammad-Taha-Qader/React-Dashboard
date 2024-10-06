@@ -1,11 +1,11 @@
 import { ShoppingCart, DollarSign, Users, Package} from 'react-feather';
-import AnalyticsCard from '../components/AnalyticsCard'; 
-import RecentMovementChart from '../components/RecentMovementChart';
+import AnalyticsCard from '../components/Dashboard/AnalyticsCard'; 
+import RecentMovementChart from '../components/Dashboard/RecentMovementChart';
 import Sidebar from '../components/SideBar';
 import TopNav from '../components/TopNav';
-import RealTimeMapComponent from '../components/RealTimeMapComponent';
-import BrowserUsageComponent from '../components/BrowserUsageComponent';
-import CalendarComponent from '../components/CalendarComponent';
+import RealTimeMapComponent from '../components/Dashboard/RealTimeMapComponent';
+import BrowserUsageComponent from '../components/Dashboard/BrowserUsageComponent';
+import CalendarComponent from '../components/Dashboard/CalendarComponent';
 const Dashboard = ({isSideBarVisible,toggleSideBar }) => {
 
   return (

@@ -1,4 +1,4 @@
-import RealTimeMapComponent from "../components/RealTimeMapComponent";
+import RealTimeMapComponent from "../components/Dashboard/RealTimeMapComponent";
 import Sidebar from "../components/SideBar";
 import TopNav from "../components/TopNav";
 
